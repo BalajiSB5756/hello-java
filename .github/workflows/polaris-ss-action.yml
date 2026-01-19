@@ -26,9 +26,9 @@ jobs:
         polaris_access_token: ${{ secrets.POLARIS_ACCESSTOKEN }}
         polaris_assessment_types: 'SAST'
         polaris_application_name: BSB-${{ github.event.repository.name }}
-        polaris_prComment_enabled: 'true'
-        polaris_reports_sarif_create: 'true'
-        polaris_upload_sarif_report: 'true'
+        #polaris_prComment_enabled: 'true'
+        #polaris_reports_sarif_create: 'true'
+        #polaris_upload_sarif_report: 'true'
         github_token: ${{ secrets.GITHUB_TOKEN }}
         polaris_project_name: local-${{ github.event.repository.name }}
 
