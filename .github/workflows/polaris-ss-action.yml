@@ -30,6 +30,9 @@ jobs:
         polaris_reports_sarif_create: 'false'
         polaris_upload_sarif_report: 'false'
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        polaris_project_name: hybridscan-${{ github.event.repository.name }}
+        polaris_test_sast_location: 'hybrid'
+        
         # include_diagnostics: true
 #    - name: Save Logs
 #      if: always()
