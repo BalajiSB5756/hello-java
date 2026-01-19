@@ -24,13 +24,13 @@ jobs:
       with:
         polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
         polaris_access_token: ${{ secrets.POLARIS_ACCESSTOKEN }}
-        polaris_assessment_types: 'SAST,SCA'
+        polaris_assessment_types: 'SAST'
         polaris_application_name: BSB-${{ github.event.repository.name }}
         polaris_prComment_enabled: 'true'
         polaris_reports_sarif_create: 'false'
         polaris_upload_sarif_report: 'false'
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        polaris_project_name: hybridscan-${{ github.event.repository.name }}
+        polaris_project_name: local-${{ github.event.repository.name }}
         polaris_test_sast_location: 'local'
         
         # include_diagnostics: true
