@@ -31,7 +31,11 @@ jobs:
         polaris_upload_sarif_report: 'false'
         github_token: ${{ secrets.GITHUB_TOKEN }}
         polaris_project_name: local-${{ github.event.repository.name }}
-        polaris_test_sast_location: 'local'
+
+        #### Uncomment this to use Local Analysis feature
+        # Please use Local Analysis or Source Upload exclusively
+        BRIDGE_POLARIS_TEST_SAST_LOCATION: 'local'
+        #polaris_test_sast_location: 'local'
         
         # include_diagnostics: true
 #    - name: Save Logs
